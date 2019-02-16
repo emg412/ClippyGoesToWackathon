@@ -1,0 +1,23 @@
+#greeting {
+	font-family: 'Lato', sans-serif;
+	color: black;
+	font-weight: 300;
+}
+
+#cash_good {
+	font-family: 'Lato', sans-serif;
+	color: #54ce75;
+	font-weight: 300;
+}
+
+#cash_bad {
+	font-family: 'Lato', sans-serif;
+	color: #ef4f59;
+	font-weight: 300;
+}
+
+#warning {
+	font-family: 'Lato', sans-serif;
+	color: black;
+	font-weight: 300;
+}

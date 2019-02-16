@@ -13,5 +13,5 @@ function getResults(){
 
 function showResults(results) {
     var resultsElement = document.getElementById("results");
-    resultsElement.innerText = results ? "This is an Amazon-related webpage." : "This is NOT an Amazon-related webpage.";
+    resultsElement.innerText = results ? "This is a checkout cart." : "This is NOT a checkout cart.";
 }
