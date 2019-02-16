@@ -31,5 +31,12 @@
  "version": "1",
  "author": "Wackathon",
 
+"browser_action": {
+   "default_icon": "tab-icon.png",
+   "default_title": "Settings",
+   "default_popup": "Sender.html"
+ },
+
+
  "permissions": ["activeTab", "pageCapture", "tabs", "storage"]
 }
