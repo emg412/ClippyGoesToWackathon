@@ -6,6 +6,11 @@
  	"scripts": ["background.js"],
  	"persistent": true
  },
+ "browser_action": {
+   "default_icon": "tab-icon.png",
+   "default_title": "Settings",
+   "default_page": "localPage.html"
+ },
  
  "content_scripts": [{
  	"matches": ["https://www.amazon.com/*", "https://www.ebay.com/*"],
@@ -25,11 +30,6 @@
 
  "version": "1",
  "author": "Wackathon",
-"browser_action": {
-   "default_icon": "tab-icon.png",
-   "default_title": "Settings",
-   "default_page": "localPage.html"
- },
 
  "permissions": ["activeTab", "pageCapture", "tabs", "storage"]
 }
