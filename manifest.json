@@ -28,7 +28,7 @@
 "browser_action": {
    "default_icon": "tab-icon.png",
    "default_title": "Settings",
-   "default_page": "localPage.html"
+   "default_popup": "Sender.html"
  },
 
  "permissions": ["activeTab", "pageCapture", "tabs", "storage"]
