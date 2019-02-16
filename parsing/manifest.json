@@ -16,6 +16,7 @@
         "default_popup": "popup.html",
         "default_title": "Check to see if our code is on this page"
     },
+    "options_page" : "options.html",
     "content_scripts": [{
         "matches": ["<all_urls>"],
         "js": ["content.js"],
