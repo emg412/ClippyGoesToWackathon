@@ -1,18 +1,12 @@
-saving account information
+function storeData(name, user, pass){
 
-storeData(name, user, pass){
-	var dict = []; // create an empty array
-
-dict.push({
-    key: "firstName",
-    value: name
-});
-dict.push({
-    key: "userName",
-    value: user
-});
-dict.push({
-    key: "password",
-    value: pass
-});
+	chrome.storage.local.set({"firstName": name}, function(){
+		console.log("1) value stored: " + name);
+	});
+	chrome.storage.local.set({"userName": user}, function(){
+		console.log("2) value stored: " + name);
+	});
+	chrome.storage.local.set({"password": pass}, function(){
+		console.log("3) value stored: " + name);
+	});
 }
