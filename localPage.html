@@ -4,6 +4,7 @@
 <body>
   <head>
     <title>Peppy!</title>
+    <script type="text/javascript" src="Setup.js"></script>
   </head>
     <h1>Welcome to Peppy!</h1>
     <div class="wrapper">
@@ -29,7 +30,7 @@
 		    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
 		    <hr>
 
-		    <button type="submit" class="registerbtn">Register</button>
+		    <button type="submit" class="registerbtn" onclick="storeData(firstname, username, psw)">Register</button>
 		  </div>
 		  
 		</form>
