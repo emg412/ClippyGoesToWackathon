@@ -13,5 +13,5 @@ function getResults(){
 
 function showResults(results) {
     var resultsElement = document.getElementById("results");
-    resultsElement.innerText = results ? "This page uses jQuery" : "This page does NOT use jQuery";
+    resultsElement.innerText = results ? "This is an Amazon-related webpage." : "This is NOT an Amazon-related webpage.";
 }
