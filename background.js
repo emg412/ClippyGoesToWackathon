@@ -1,9 +1,8 @@
 chrome.runtime.onInstalled.addListener(function(){
-	chrome.contextMenus.create({
-		"id": "sample context menus",
-		"title": "sample context menu",
-		"contexts": ["selection"]
-
+	alert('Thank you for installing Peppy!\nYou will now be redirected to our home page where you can set up your account!\n');
+	chrome.tabs.create({
+		url:"place url for settings page here"
+		active: true
 	});
 });
 

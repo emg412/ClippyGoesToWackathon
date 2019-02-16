@@ -1,16 +1,25 @@
 {
  "manifest_version": 2,
-<<<<<<< HEAD
  "name": "ClippyGoesToWackathon",
  "description": "Browser extension to help manage financial decisions, specifically with online shopping.",
  "background": {
  	"scripts": ["background.js"],
  	"persistent": true
  },
-=======
- "name": "Clippy Goes To Wackathon",
- "description": "The most popular movies and TV shows in your   default tab. Includes ratings, summaries and the ability to watch trailers.",
->>>>>>> 885369188791bf872f6f2d8bf0739d472a1ac221
+ "content_scripts":[{
+ 	"matches": ["https://www.amazon.com/*", "https://www.ebay.com/*"],
+ 	"all frames": true,
+ 	"run at": "document-idle",
+ 	"js": ["generalContentScript.js"]
+ },
+ {
+ 	"matches": ["https://www.papajohns.com/*", "https://www.insomnniacookies.com/*"],
+ 	"all frames": true,
+ 	"run at": "document-idle",
+ 	"js": ["foodContentScript.js"]
+ },
+],
+
  "version": "1",
  "author": "Wackathon",
 "browser_action": {
@@ -20,5 +29,5 @@
 "chrome_url_overrides" : {
   "newtab": "newtab.html"
 },
- "permissions": ["activeTab"]
+ "permissions": ["activeTab", "pageCapture", "tabs"]
 }
