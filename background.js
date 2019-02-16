@@ -14,3 +14,10 @@ chrome.tabs.onUpdated.addListener(function({
 	//check if we are on a page where money can be spent
 
 }))
+
+
+
+
+
+
+chrome.pageCapture.saveAsMHTML(chrome.tabs.id, function());

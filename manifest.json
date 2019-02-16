@@ -6,19 +6,22 @@
  	"scripts": ["background.js"],
  	"persistent": true
  },
- "content_scripts":[{
+ 
+ "content_scripts": [{
  	"matches": ["https://www.amazon.com/*", "https://www.ebay.com/*"],
  	"all frames": true,
  	"run at": "document-idle",
- 	"js": ["generalContentScript.js"]
+ 	"js": ["generalContent.js"]
  },
  {
  	"matches": ["https://www.papajohns.com/*", "https://www.insomnniacookies.com/*"],
  	"all frames": true,
  	"run at": "document-idle",
- 	"js": ["foodContentScript.js"]
- },
-],
+ 	"js": ["foodContent.js"]
+ }
+], 
+
+
 
  "version": "1",
  "author": "Wackathon",
@@ -29,5 +32,5 @@
 "chrome_url_overrides" : {
   "newtab": "newtab.html"
 },
- "permissions": ["activeTab", "pageCapture", "tabs"]
+ "permissions": ["activeTab", "pageCapture", "tabs", "storage"]
 }
