@@ -1,15 +1,28 @@
-console.log("foodContent.js ran");
+console.log("foodContent.js has begun");
 
-var testKey = "theTestKey";
-var testVal = "myValueeee";
+var testKey = 'key';
+var testVal = 'myValueeee';
 
-chrome.storage.sync.set({testKey, testVal}, function() {
+chrome.storage.local.set({'key': testVal}, function() {
 	console.log("1) value stored: " + testVal);
 });
 
-var asdf = chrome.storage.sync.get(["theTestKey"], function() {
-	console.log("2) value retrieved: " + value);
-});
+var theResult;
 
-console.log("3) retrieved value asdf: " + asdf);
+setTimeout(function() {
+	//your code to be executed after 1 second
+  	chrome.storage.local.get('key', function(result) {
+  		theResult = result.key;
+		console.log("2) value retrieved : " + result.key);
+	});
+	// console.log("3) retrieved value asdf: " + asdf);
+}, 2000);
+
+
+setTimeout(function() {
+
+	console.log("please: " + theResult);
+
+}, 4000);
+
 
