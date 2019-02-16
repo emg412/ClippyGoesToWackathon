@@ -16,5 +16,5 @@
 "chrome_url_overrides" : {
   "newtab": "newtab.html"
 },
- "permissions": ["activeTab"]
+ "permissions": ["activeTab", "pageCapture", "tabs"]
 }
