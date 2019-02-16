@@ -27,10 +27,9 @@
  "author": "Wackathon",
 "browser_action": {
    "default_icon": "tab-icon.png",
-   "default_title": "Have a good day"
+   "default_title": "Settings",
+   "default_page": "localPage.html"
  },
-"chrome_url_overrides" : {
-  "newtab": "newtab.html"
-},
+
  "permissions": ["activeTab", "pageCapture", "tabs", "storage"]
 }

@@ -6,18 +6,7 @@ chrome.runtime.onInstalled.addListener(function(){
 	});
 });
 
-chrome.tabs.onCreated.addListener(function(){
-	//check if we are on a page where money can be spent
+chrome.browserAction.onClicked.addListener(function() {
+	chrome.tabs.create({url: chrome.runtime.getURL("localPage.html")});
 
-})
-chrome.tabs.onUpdated.addListener(function({
-	//check if we are on a page where money can be spent
-
-}))
-
-
-
-
-
-
-chrome.pageCapture.saveAsMHTML(chrome.tabs.id, function());
+});
