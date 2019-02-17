@@ -2,20 +2,21 @@ document.addEventListener("DOMContentLoaded", function(event) {
     var resultsButton = document.getElementById("settings");
     resultsButton.onclick = settings;
     getResults();
-    var magicNumber = localStorage.getItem("categorySwitch").value; 
-    switch(magicNumber){
-        case 0:
-            console.log("hello");
-            showClothes();
-            break;
-        case 1;
-            console.log("hi");
-            showFood();
-            break;
-        default;
-            console.log("hey");
-            showGeneral();
-    }
+    // var magicNumber = localStorage.getItem("categorySwitch"); 
+    // switch(magicNumber){
+    //     case 0:
+    //         console.log("hello");
+    //         showClothes();
+    //         break;
+    //     case 1;
+    //         console.log("hi");
+    //         showFood();
+    //         break;
+    //     default;
+    //         console.log("hey");
+    //         showGeneral();
+    // }
+    showFood();
 });
 
 function getResults(){
@@ -36,27 +37,27 @@ function showResults(results) {
     } else {
         resultsElement.innerText = "This is NOT a checkout cart.";
     }
-    // resultsElement.innerText = results ? "This is a checkout cart." : "This is NOT a checkout cart.";
+    resultsElement.innerText = results ? "This is a checkout cart." : "This is NOT a checkout cart.";
 
 
-    if (!results && preVes) {
-        confirmPurchase();
-    }
+    // if (!results && preVes) {
+    //     confirmPurchase();
+    // }
 
-    localStorage.setItem("previousResult", results);
+    // localStorage.setItem("previousResult", results);
 
 }
 
 
 
 function showFood() {
-    var clientName = localStorage.getItem("first");
-    var clientElement = document.getElementById("client_name");
-    clientElement.innerText = clientName;
+    // var clientName = localStorage.getItem("first");
+    // var clientElement = document.getElementById("client_name");
+    // clientElement.innerText = clientName;
 
-    var currentCategory = "Food";
-    var categoryElement = document.getElementById("category");
-    categoryElement.innerText = currentCategory;
+    // var currentCategory = "Food";
+    // var categoryElement = document.getElementById("category");
+    // categoryElement.innerText = currentCategory;
 
 
     var foodBal = localStorage.getItem("totalFoodBudget");
@@ -66,55 +67,55 @@ function showFood() {
     }
     goodcashElement.innerText = "$" + foodBal
 
-    var currFoodBal = localStorage.getItem("alreadySpentFood");
-    var lowCashElement = document.getElementById("cash_low");
-    lowCashElement.innerText = foodBal - currFoodBal; 
+    // var currFoodBal = localStorage.getItem("alreadySpentFood");
+    // var lowCashElement = document.getElementById("cash_low");
+    // lowCashElement.innerText = foodBal - currFoodBal; 
 }
 
 
 
-function showClothes() {
-    var clientName = localStorage.getItem("first");
-    var clientElement = document.getElementById("client_name");
-    clientElement.innerText = clientName;
+// function showClothes() {
+//     var clientName = localStorage.getItem("first");
+//     var clientElement = document.getElementById("client_name");
+//     clientElement.innerText = clientName;
 
-    var currentCategory = "Clothes";
-    var categoryElement = document.getElementById("category");
-    categoryElement.innerText = currentCategory;
+//     var currentCategory = "Clothes";
+//     var categoryElement = document.getElementById("category");
+//     categoryElement.innerText = currentCategory;
 
-    var clothesBal = localStorage.getItem("totalClothesBudget");
-    var goodcashElement = document.getElementById("cash_good");
-    if (clothesBal.length < 4) {
-        clothesBal = clothesBal + ".00"
-    }
-    goodcashElement.innerText = "$" + clothesBal
+//     var clothesBal = localStorage.getItem("totalClothesBudget");
+//     var goodcashElement = document.getElementById("cash_good");
+//     if (clothesBal.length < 4) {
+//         clothesBal = clothesBal + ".00"
+//     }
+//     goodcashElement.innerText = "$" + clothesBal
 
-    var currClothesBal = localStorage.getItem("alreadySpentClothes");
-    var lowCashElement = document.getElementById("cash_low");
-    lowCashElement.innerText = clothesBal - currClothesBal;
-}
+//     var currClothesBal = localStorage.getItem("alreadySpentClothes");
+//     var lowCashElement = document.getElementById("cash_low");
+//     lowCashElement.innerText = clothesBal - currClothesBal;
+// }
 
 
-function showGeneral() {
-    var clientName = localStorage.getItem("first");
-    var clientElement = document.getElementById("client_name");
-    clientElement.innerText = clientName;
+// function showGeneral() {
+//     var clientName = localStorage.getItem("first");
+//     var clientElement = document.getElementById("client_name");
+//     clientElement.innerText = clientName;
 
-    var currentCategory = "General";
-    var categoryElement = document.getElementById("category");
-    categoryElement.innerText = currentCategory;
+//     var currentCategory = "General";
+//     var categoryElement = document.getElementById("category");
+//     categoryElement.innerText = currentCategory;
 
-    var generalBal = localStorage.getItem("totalGeneralBudget");
-    var goodcashElement = document.getElementById("cash_good");
-    if (generalBal.length < 4) {
-        generalBal = generalBal + ".00"
-    }
-    goodcashElement.innerText = "$" + generalBal
+//     var generalBal = localStorage.getItem("totalGeneralBudget");
+//     var goodcashElement = document.getElementById("cash_good");
+//     if (generalBal.length < 4) {
+//         generalBal = generalBal + ".00"
+//     }
+//     goodcashElement.innerText = "$" + generalBal
 
-    var currGeneralBal = localStorage.getItem("alreadySpentGeneral");
-    var lowCashElement = document.getElementById("cash_low");
-    lowCashElement.innerText = generalBal - currGeneralBal;
-}
+//     var currGeneralBal = localStorage.getItem("alreadySpentGeneral");
+//     var lowCashElement = document.getElementById("cash_low");
+//     lowCashElement.innerText = generalBal - currGeneralBal;
+// }
 
 function settings() {
 	window.open("localPage.html");
