@@ -17,7 +17,6 @@ function checkForWord(request, sender, sendResponse){
     var scripts = document.getElementsByTagName("script");
     for (var i=0;i<scripts.length;i++) {
         if (scripts[i].src.toLowerCase().indexOf("checkout")>-1){
-            
             return sendResponse(true);
         }
     }
