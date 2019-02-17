@@ -1,3 +1,6 @@
+
+
+
 var initialBudget = localStorage.getItem("totalFoodBudget").value;
 var alreadySpent = localStorage.getItem("alreadySpentFood").value; 
 var budgetLeft = initialBudget - alreadySpent; 
