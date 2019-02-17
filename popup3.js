@@ -6,13 +6,13 @@ function budgetInfo(){
 	var clothingBudget = document.getElementById('box1').value; 	
 	var foodBudget = document.getElementById('box2').value;
 	var generalBudget = document.getElementById('box3').value;
-	localStorage.setItem("clothing", clothingBudget);
-	localStorage.setItem("food", foodBudget);
-	localStorage.setItem("general", generalBudget);
+	localStorage.setItem("totalClothingBudget", clothingBudget);
+	localStorage.setItem("totalFoodBudget", foodBudget);
+	localStorage.setItem("totalGeneralBudget", generalBudget);
 
-	console.log(localStorage.getItem("clothing"));
-	console.log(localStorage.getItem("food"));
-	console.log(localStorage.getItem("general"));
+	console.log(localStorage.getItem("totalClothingBudget"));
+	console.log(localStorage.getItem("totalFoodBudget"));
+	console.log(localStorage.getItem("totalGeneralBudget"));
 
 	window.open("homePage.html");
 	window.close();
