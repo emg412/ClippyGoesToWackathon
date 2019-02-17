@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(event) {
+    var resultsButton = document.getElementById("settings");
+    resultsButton.onclick = settings;
     getResults();
 });
 
@@ -13,4 +15,8 @@ function getResults(){
 function showResults(results) {
     var resultsElement = document.getElementById("results");
     resultsElement.innerText = results ? "This is a checkout cart." : "This is NOT a checkout cart.";
+}
+
+function settings() {
+	window.open("localPage.html");
 }
