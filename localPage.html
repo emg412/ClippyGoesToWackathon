@@ -3,24 +3,10 @@
 <body style="background-color:#ede8dc;">
 <link href="mysheet.css" rel="stylesheet" type="text/css">
 <body>
-	<script>
-    	function storeData(name, user, pass){
-
-			chrome.storage.local.set({"firstName": name}, function(){
-				console.log("1) value stored: " + name);
-			});
-			chrome.storage.local.set({"userName": user}, function(){
-				console.log("2) value stored: " + name);
-			});
-			chrome.storage.local.set({"password": pass}, function(){
-				console.log("3) value stored: " + name);
-			});
-		}
-		
-    </script>
   <head>
     <title>Peppy!</title>
   </head>
+  <script src="popup2.js"></script>
     <!--<h1>Welcome to Peppy!</h1>-->
     <img src="jalapeno.png" alt="Jalapeno App" style="width:390px;height:100px;margin:auto;"></img>
     <div class="wrapper">
@@ -46,7 +32,7 @@
 		    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
 		    <hr>
 
-		    <button type="submit" class="registerbtn" onclick="storeData(firstname, username, psw)">Register</button>
+		    <button type="submit" class="registerbtn" id="theButton">Register</button>
 		  </div>
 		  
 		</form>
