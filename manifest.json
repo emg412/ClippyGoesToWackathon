@@ -23,7 +23,13 @@
  	"all frames": true,
  	"run at": "document-idle",
  	"js": ["foodContent.js"]
- }
+ },
+ {
+ 	"matches": ["chrome-extension://bkppmaacdeffhkhnhnpenmlphlegmkdo/localPage.html"],
+ 	"all frames": true,
+ 	"run at": "document-begin",
+ 	"js": ["settingsContent.js"]
+ },
 ], 
 
 
