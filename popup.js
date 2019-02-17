@@ -2,26 +2,25 @@ document.addEventListener("DOMContentLoaded", function(event) {
     var resultsButton = document.getElementById("settings");
     resultsButton.onclick = settings;
     getResults();
-    showFood();
-
+    showGeneral();
     var magicNumber = localStorage.getItem("categorySwitch"); 
                                                                                             // localStorage.getItem("first");
 
     console.log(magicNumber);
 
 
-    if (magicNumber == 0) {
-        console.log("hello");
-        showGeneral();
-    }
-    else if (magicNumber == 1) {
-        console.log("hi");
-        showFood();
-    }
-    else {
-        console.log("sup");
-        showClothes();
-    }
+    // if (magicNumber == 0) {
+    //     console.log("hello");
+    //     showGeneral();
+    // }
+    // else if (magicNumber == 1) {
+    //     console.log("hi");
+    //     showFood();
+    // }
+    // else {
+    //     console.log("sup");
+    //     showClothes();
+    // }
 
 });
 

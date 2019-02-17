@@ -1,4 +1,6 @@
 localStorage.setItem("categorySwitch", 2);
+
+console.log("categoryswitch updated to 2");
 // var initialBudget = localStorage.getItem("totalClothingBudget").value;
 // var alreadySpent = localStorage.getItem("alreadySpentClothing").value; 
 // var budgetLeft = initialBudget - alreadySpent; 
