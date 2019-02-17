@@ -9,9 +9,9 @@ function userInfo(){
 	localStorage.setItem("user", userName);
 	localStorage.setItem("pass", password);
 
-	console.log(localStorage.getItem("first"));
-	console.log(localStorage.getItem("user"));
-	console.log(localStorage.getItem("pass"));
+	// console.log(localStorage.getItem("first"));
+	// console.log(localStorage.getItem("user"));
+	// console.log(localStorage.getItem("pass"));
 
 	window.open("categories.html");
 	window.close();
@@ -25,6 +25,13 @@ function budgetInfo(){
 	localStorage.setItem("clothing", clothing);
 	localStorage.setItem("food", food);
 	localStorage.setItem("general", general);
+
+	// console.log(localStorage.getItem("clothing"));
+	// console.log(localStorage.getItem("food"));
+	// console.log(localStorage.getItem("general"));
+
+	window.open("homePage.html");
+	window.close();
 }
 
 
