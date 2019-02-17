@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function(event) {
     var resultsButton = document.getElementById("theButton").addEventListener('click', userInfo);
 });
+document.addEventListener("DOMContentLoaded", function(event){
+	var categoriesButton = document.getElementById("secondButton").addEventListener('click', budgetInfo);
+})
 function userInfo(){
 	var firstName = document.getElementById('box1').value;
 	var userName = document.getElementById('box2').value;
