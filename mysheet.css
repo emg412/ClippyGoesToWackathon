@@ -1,11 +1,6 @@
 * {
-	box-sizing: border-box;
-}
-
-* {
 	font-family: 'Lato', sans-serif;
 	color: black;
-	font-weight: 300;
 }
 
 .barbox {
@@ -32,7 +27,7 @@
 }
 
 .progress-big {
-	width: 110px;
+	width: 130px;
 	height: 10px;
 	border-radius: 10px 10px 10px 10px;
 	background-color: #59674f;
@@ -40,7 +35,7 @@
 }
 
 .progress-small {
-	width: 50px;
+	width: 30px;
 	height: 10px;
 	border-radius: 10px 10px 10px 10px;
 	background-color: #59674f;
