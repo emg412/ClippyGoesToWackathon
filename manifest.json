@@ -2,6 +2,11 @@
  "manifest_version": 2,
  "name": "ClippyGoesToWackathon",
  "description": "Browser extension to help manage financial decisions, specifically with online shopping.",
+ "icons": {
+        "128": "icon128.png",
+        "32": "icon32.png",
+        "48": "icon.png"
+    },
  "background": {
  	"scripts": ["background.js"],
  	"persistent": true
@@ -25,24 +30,29 @@
  	"js": ["foodContent.js"]
  },
  {
- 	"matches": ["chrome-extension://bkppmaacdeffhkhnhnpenmlphlegmkdo/localPage.html"],
- 	"all frames": true,
- 	"run at": "document-begin",
- 	"js": ["settingsContent.js"]
- },
-], 
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "run_at": "document_end"
+ }
+],
 
 
 
  "version": "1",
  "author": "Wackathon",
 
-"browser_action": {
-   "default_icon": "tab-icon.png",
-   "default_title": "Settings",
-   "default_popup": "Sender.html"
- },
 
+
+"browser_action": {
+   "default_icon": {
+            "16": "icon16.png",
+            "32": "icon32.png"
+   },
+
+
+   "default_title": "Jalapeño",
+   "default_popup": "popup.html"
+},
 
  "permissions": ["activeTab", "pageCapture", "tabs", "storage"]
 }

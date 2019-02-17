@@ -1,0 +1,53 @@
+<!doctype html>
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link href="mysheet.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Lato:100,300,700,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+<html>
+    <head>
+        <title>Jalapeno</title>
+        <script src="popup.js"></script>
+        <script src="date.js"></script>
+    </head>
+    <center>
+        <img src="jalapeno.png" alt="Jalapeno App" style="width:160px;height:41px;margin:auto;"></img>
+    </center>
+    <body style="background-color:#ede8dc;width:180px;height:250px;">
+        <center>
+            <button class="button" id="settings" style="vertical-align:middle"><span>Preferences</span></button>
+            <div id="status">
+                <h4 id="results"></h4>
+            </div>
+            <div id="greeting">
+                <h4 id="greeting">Good afternoon, <b>Oliver.</b></h4>
+            </div>            
+            <div id="current">
+                <h4 id="warning">In the <b>Clothing</b> category, you have</h4>
+                <h1 id="cash_good">$214.72</h1>
+                <h4 id="warning">left to spend this <span id="month">month</span>.</h4>
+            </div>
+            <div class="barbox">
+                <div class="progress-bar">
+                    <div class="progress-big" id="progress">
+                        <div class="percent"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="status">
+                <h4 id="warning">If you make this purchase, you will have</h4>
+                <h1 id="cash_low">$76.12</h1>
+                <h4 id="warning">left to spend this month.</h4>
+            </div>
+        <div class="barbox">
+            <div class="progress-bar">
+            <div class="progress-small" id="progress">
+                <div class="percent"></div>
+            </div>
+        </div>
+        </center>
+        <script src="bar.js"></script>
+    </body>
+</html>
