@@ -1,28 +1,10 @@
-console.log("foodContent.js has begun");
+var initialBudget = localStorage.getItem("totalFoodBudget").value;
+var alreadySpent = localStorage.getItem("alreadySpentFood").value; 
+var budgetLeft = initialBudget - alreadySpent; 
 
-var testKey = 'key';
-var testVal = 'myValueeee';
+var client_name = localStorage.getItem("first").value; 
+var category = "Food";
 
-chrome.storage.local.set({'key': testVal}, function() {
-	console.log("1) value stored: " + testVal);
-});
-
-var theResult;
-
-setTimeout(function() {
-	//your code to be executed after 1 second
-  	chrome.storage.local.get('key', function(result) {
-  		theResult = result.key;
-		console.log("2) value retrieved : " + result.key);
-	});
-	// console.log("3) retrieved value asdf: " + asdf);
-}, 2000);
-
-
-setTimeout(function() {
-
-	console.log("please: " + theResult);
-
-}, 4000);
+//change all the values in the popup window
 
 

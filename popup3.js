@@ -10,9 +10,13 @@ function budgetInfo(){
 	localStorage.setItem("totalFoodBudget", foodBudget);
 	localStorage.setItem("totalGeneralBudget", generalBudget);
 
-	console.log(localStorage.getItem("totalClothingBudget"));
-	console.log(localStorage.getItem("totalFoodBudget"));
-	console.log(localStorage.getItem("totalGeneralBudget"));
+	localStorage.setItem("alreadySpentClothing", 0);
+	localStorage.setItem("alreadySpentFood", 0);
+	localStorage.setItem("alreadySpentGeneral", 0);
+
+	// console.log(localStorage.getItem("totalClothingBudget"));
+	// console.log(localStorage.getItem("totalFoodBudget"));
+	// console.log(localStorage.getItem("totalGeneralBudget"));
 
 	window.open("homePage.html");
 	window.close();
