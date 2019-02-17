@@ -10,9 +10,13 @@ function userInfo(){
 	localStorage.setItem("user", userName);
 	localStorage.setItem("pass", password);
 
+	localStorage.setItem("previousResult", false);
+
 	// console.log(localStorage.getItem("first"));
 	// console.log(localStorage.getItem("user"));
 	// console.log(localStorage.getItem("pass"));
+
+
 
 	window.open("categories.html");
 	window.close();

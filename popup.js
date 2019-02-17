@@ -14,8 +14,24 @@ function getResults(){
 }
 
 function showResults(results) {
+
     var resultsElement = document.getElementById("results");
-    resultsElement.innerText = results ? "This is a checkout cart." : "This is NOT a checkout cart.";
+    var prevRes = localStorage.getItem("previousResult");
+
+    if (results) {
+        resultsElement.innerText = "This is a checkout cart.";
+    } else {
+        resultsElement.innerText = "This is NOT a checkout cart.";
+    }
+    // resultsElement.innerText = results ? "This is a checkout cart." : "This is NOT a checkout cart.";
+
+
+    if (!results && preVes) {
+        confirmPurchase();
+    }
+
+    localStorage.setItem("previousResult", results);
+
 }
 
 function showFood() {
@@ -30,3 +46,18 @@ function showFood() {
 function settings() {
 	window.open("localPage.html");
 }
+
+
+function confirmPurchase() {
+
+    if (confirm("Did you complete the purchase?")) {
+        // update balance accordingly (oliver)
+    } else {
+        // do nothing 
+    }
+}
+
+
+
+
+
