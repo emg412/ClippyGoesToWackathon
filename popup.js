@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     var resultsButton = document.getElementById("settings");
     resultsButton.onclick = settings;
     getResults();
-    showGeneral();
     var magicNumber = localStorage.getItem("categorySwitch"); 
                                                                                             // localStorage.getItem("first");
 
