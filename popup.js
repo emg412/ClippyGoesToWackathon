@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     var resultsButton = document.getElementById("settings");
     resultsButton.onclick = settings;
     getResults();
+    showFood();
 
     var magicNumber = localStorage.getItem("categorySwitch"); 
                                                                                             // localStorage.getItem("first");
@@ -13,11 +14,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
         console.log("hello");
         showGeneral();
     }
-    if (magicNumber == 1) {
+    else if (magicNumber == 1) {
         console.log("hi");
         showFood();
     }
-    if (magicNumber == 2) {
+    else {
         console.log("sup");
         showClothes();
     }
@@ -37,11 +38,11 @@ function showResults(results) {
     var resultsElement = document.getElementById("results");
     var prevRes = localStorage.getItem("previousResult");
 
-    if (results) {
-        resultsElement.innerText = "This is a checkout cart.";
-    } else {
-        resultsElement.innerText = "This is NOT a checkout cart.";
-    }
+    // if (results) {
+    //     resultsElement.innerText = "This is a checkout cart.";
+    // } else {
+    //     resultsElement.innerText = "This is NOT a checkout cart.";
+    // }
     resultsElement.innerText = results ? "This is a checkout cart." : "This is NOT a checkout cart.";
 
 

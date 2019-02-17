@@ -1,7 +1,7 @@
 // listen for checkForWord request, call getTags which includes callback to sendResponse
-import "foodContent.js"; 
-import "generalContent.js";
-import "clothingContent.js";
+// import "foodContent.js"; 
+// import "generalContent.js";
+// import "clothingContent.js";
 
 chrome.runtime.onMessage.addListener(
     function (request, sender, sendResponse) {

@@ -18,18 +18,18 @@
  },
  
  "content_scripts": [{
- 	"matches": ["https://www.amazon.com/*", "https://www.ebay.com/*"],
+ 	"matches": ["https://www.amazon.com/*"],
  	"all frames": true,
  	"run at": "document-idle",
  	"js": ["generalContent.js"]
  },
  {
-  "matches": ["https://www.target.com/*", "https://www.ae.com/*"],
+  "matches": ["https://www.target.com/*"],
   "all frames": true,
   "run at": "document-idle",
   "js": ["clothingContent.js"]
  }, {
- 	"matches": ["https://www.papajohns.com/*", "https://www.insomnniacookies.com/*"],
+ 	"matches": ["https://www.papajohns.com/*"],
  	"all frames": true,
  	"run at": "document-idle",
  	"js": ["foodContent.js"]
